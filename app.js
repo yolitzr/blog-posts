@@ -32,6 +32,8 @@ app.get('/posts/create', (req, res) => {
   })
 });
 
+app.use(express.static(__dirname + '/public'))
+
 // 404 page
 app.use((req, res) => {
   res.status(404).render('404', {
